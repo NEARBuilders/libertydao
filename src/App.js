@@ -23,7 +23,7 @@ import { useBosLoaderInitializer } from "./hooks/useBosLoaderInitializer";
 import Flags from "./pages/Flags";
 import ViewPage from "./pages/ViewPage";
 import BoroughPage from "./pages/BoroughPage";
-import { ActionButton } from "./components/common/buttons/ActionButton";
+import BountyPage from "./pages/BountyPage";
 
 export const refreshAllowanceObj = {};
 const documentationHref = "https://social.near-docs.io/";
@@ -152,6 +152,10 @@ function App(props) {
       <Switch>
         <Route path={"/flags"}>
           <Flags {...passProps} />
+        </Route>
+        <Route path={"/bounties"}>
+          <BountyPage {...passProps} />
+          {/* <ActionButton {...passProps} /> */}
         </Route>
         <Route path={"/boroughs"}>
           <BoroughPage {...passProps} />
