@@ -3,11 +3,11 @@ import { useEffect } from "react";
 function BountyRedirect() {
   useEffect(() => {
     window.location.replace(
-      "https://docs.google.com/document/d/1JGsKasikEpPMVqaaXiXib4ODm6vAYOA-C-uD6TRNspU"
+      "https://docs.google.com/document/d/1caYSOgZ1FjRQnL8xCXNIB1kHCB28aldCT_s8529xokI"
     );
   }, []);
 
-  return null; // Or some loading indicator if you prefer
+  return null; 
 }
 
 export default BountyRedirect;
