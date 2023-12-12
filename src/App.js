@@ -24,6 +24,7 @@ import Flags from "./pages/Flags";
 import ViewPage from "./pages/ViewPage";
 import BoroughPage from "./pages/BoroughPage";
 import BountyPage from "./pages/BountyPage";
+import MapathonPage from "./pages/MapathonPage";
 
 export const refreshAllowanceObj = {};
 const documentationHref = "https://social.near-docs.io/";
@@ -155,15 +156,15 @@ function App(props) {
         </Route>
         <Route path={"/bounties"}>
           <BountyPage {...passProps} />
-          {/* <ActionButton {...passProps} /> */}
         </Route>
         <Route path={"/boroughs"}>
           <BoroughPage {...passProps} />
-          {/* <ActionButton {...passProps} /> */}
+        </Route>
+        <Route path={"/mapathon"}>
+          <MapathonPage {...passProps} />
         </Route>
         <Route path={"/:widgetSrc*"}>
           <ViewPage {...passProps} />
-          {/* <ActionButton {...passProps} /> */}
         </Route>
       </Switch>
     </Router>

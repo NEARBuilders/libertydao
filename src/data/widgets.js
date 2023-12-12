@@ -1,5 +1,5 @@
 const TestnetDomains = {
-  "test.near.social": true,
+  "test.libertydao.online": true,
   "127.0.0.1": true,
 };
 
@@ -20,6 +20,7 @@ const TestnetWidgets = {
 const MainnetWidgets = {
   image: "mob.near/widget/Image",
   default: "libertydao.near/widget/home",
+  mapathon: "libertydao.near/widget/mapathon.home",
   thing: "efiz.near/widget/every.thing.view",
   create: "efiz.near/widget/creator",
   header: {
