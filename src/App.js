@@ -1,4 +1,3 @@
-import { sanitizeUrl } from "@braintree/sanitize-url";
 import { setupWalletSelector } from "@near-wallet-selector/core";
 import { setupHereWallet } from "@near-wallet-selector/here-wallet";
 import { setupMeteorWallet } from "@near-wallet-selector/meteor-wallet";
@@ -25,6 +24,7 @@ import ViewPage from "./pages/ViewPage";
 import BoroughPage from "./pages/BoroughPage";
 import BountyPage from "./pages/BountyPage";
 import MapathonPage from "./pages/MapathonPage";
+import { isValidAttribute } from "dompurify";
 
 export const refreshAllowanceObj = {};
 const documentationHref = "https://social.near-docs.io/";
@@ -69,7 +69,9 @@ function App(props) {
               delete props.href;
             }
             if (props.to) {
-              props.to = sanitizeUrl(props.to);
+              props.to = isValidAttribute("a", "href", props.to)
+                ? props.to
+                : "about:blank";
             }
             return <Link {...props} />;
           },
