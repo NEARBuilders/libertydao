@@ -41,13 +41,11 @@
   "scripts": {
     "serve": "webpack serve",
     "webpack": "webpack",
-    "bosworkspace": "bos-workspace",
-    "dev": "concurrently \"npm run bosworkspace dev\" \"npm run serve -- --env mode=development\"",
+    "dev": "concurrently \"bos-workspace dev\" \"npm run serve -- --env mode=development\"",
     "prod": "npm run webpack -- --env mode=production",
     "prod:analyze": "npm run prod -- --env presets=analyze",
-    "build": "npm run prod",
-    "start": "npm run dev",
-    "dev-widgets": "~/.cargo/bin/bos-loader every.near --path widgets"
+    "build": "concurrently \"bos-workspace build\" \"npm run prod\"",
+    "start": "npm run dev"
   },
   "eslintConfig": {
     "extends": [
@@ -74,7 +72,7 @@
     "@babel/preset-react": "^7.14.5",
     "assert": "^2.0.0",
     "babel-loader": "^8.2.2",
-    "bos-workspace": "^0.0.1-alpha.0",
+    "bos-workspace": "^0.0.1-alpha.4",
     "browserify-zlib": "^0.2.0",
     "buffer": "^6.0.3",
     "clean-webpack-plugin": "^4.0.0",
